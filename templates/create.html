@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>message | create</title>
+</head>
+<body>
+    <h1>Create Message</h1>
+    <form method="POST" action="/create">
+        {% csrf_token %}
+         <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="uname" placeholder="sendername"/></td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td><input type="mail" name="uemail" placeholder="sendermail"/></td>
+            </tr>
+            <tr>
+                <td>Mobile No.:</td>
+                <td><input type="number" name="umobile" placeholder="sendermobilenumber"/></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td><textarea  name="msg" rows="3" cols="7"</textarea></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" name="send" /></td>
+            </tr>
+            
+         </table>
+    </form>     
+</body>
+</html>
